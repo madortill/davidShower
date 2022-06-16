@@ -121,7 +121,7 @@ const createShower = () => {
     El(
       "div",
       { classes: ["showerInstructions", "centerX"] },
-      "עזרו לדוד להתקלח"
+      "עזרו לדני להתקלח"
     ),
     El("img", {
       attributes: { src: "./assets/david.png", class: "david centerItem" },
@@ -318,7 +318,7 @@ const finishExer = () => {
 
   } else {
     document.querySelector(`.instructions`).classList.remove("hidden");
-    document.querySelector(`.instructions`).innerHTML = "נכשלתם במשימה! לא היו מספיק מים חמים לקלח את דוד ועכשיו הוא לא מוכן למסור לכם את הרמז הבא!";
+    document.querySelector(`.instructions`).innerHTML = "נכשלתם במשימה! לא היו מספיק מים חמים לקלח את דני ועכשיו הוא לא מוכן למסור לכם את הרמז הבא!";
   }
 }
 
@@ -328,7 +328,7 @@ Description: */
 const winShower = () => {
   document.querySelector(`.instructions`).classList.remove("hidden");
   document.querySelector(`.showerInstructions `).innerHTML = "מעולים אתם!";
-  document.querySelector(`.instructions`).innerHTML = "כל הכבוד הצלחתם לקלח את דוד! סוף סוף אפשר לראות שהעניים שלו הן בצבע כחול";
+  document.querySelector(`.instructions`).innerHTML = "כל הכבוד הצלחתם לקלח את דני! סוף סוף אפשר לראות שהעניים שלו הן בצבע כחול";
 }
 
 
