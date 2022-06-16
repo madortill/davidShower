@@ -11,28 +11,50 @@
     <title>משימת מקלחת </title>
 </head>
 </html><body>
-    
-    <div class="bodyContainer">
-        <!-- loader -->
-        <div class="loader">
-            <img src="./assets/center and mask.gif" alt="Loading..." />
-            מיד מתחילים...
+
+    <div class="aboutContainer">
+      <img class="aboutIcon" src="./assets/about_icon.svg"/>
+      <div class="aboutInfo hidden card centerItem">
+        <div>
+          <h3>אודות</h3>
+          <p class="p-odot">
+            <span class="bold">יוזמת פרוייקט:</span>
+             סמ"ר גל גנסין</p>
+          <p class="p-odot">
+            <span class="bold">מנהלת פרוייקט:</span>
+             סמ"ל דורין חתוקה</p>
+          <p class="p-odot">
+            <span class="bold">פיתוח:</span>
+             רב"ט ניצן סלומון</p>
+          <p class="p-odot">
+            <span class="bold">גרפיקאית:</span>
+             רב"ט ניצן סלומון</p>
+          <p class="p-odot">
+            <span class="bold">רמ"ד טי"ל:</span>
+             רס"ן מיגל לויתן</p>
         </div>
-        
+        <img class="xIcon" src="./assets/xIcon.svg" alt="x"/>
+    </div>
+    </div>
+    <!-- loader -->
+    <div class="loader">
+        <img src="./assets/center and mask.gif" alt="Loading..." />
+        מיד מתחילים...
+    </div>
+    <div class="bodyContainer">
         <!-- instructions -->
         <div class="instructions card centerItem">
             ענו נכון על כמה שיותר שאלות כדי שיהיה מספיק מים חמים למקלחת של דוד!
             <img class="xIcon" src="./assets/xIcon.svg" alt="x"/>
         </div>
-        
-        <div class="showerContainer"></div>
         <div class="multipleQuestionContainer centerItem card hidden"></div>
+        <div class="scratch-container hidden" id="scratch-container">
+            <canvas class="sCanvas" id="sCanvas" width="300" height="300"></canvas>
+            <!-- <img src="" alt="egg" id="innerImage" class="innerImage"> -->
+        </div>
     </div>
-    
-    <div class="scratch-container hidden" id="scratch-container">
-        <canvas class="sCanvas" id="sCanvas" width="300" height="300"></canvas>
-        <!-- <img src="" alt="egg" id="innerImage" class="innerImage"> -->
-    </div>
+      
+    <div class="showerContainer"></div>
     <div class="rainContainer">
         <div class="rain hidden">
             <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 33; --y: 36; --o: 0.2668180108212408; --a: 0.6324723031849446; --d: -0.9885367408277119; --s: 0.9938562850322199">

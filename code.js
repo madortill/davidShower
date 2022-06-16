@@ -92,7 +92,23 @@ window.addEventListener("load", () => {
   document
     .querySelector(`.instructions .xIcon`)
     .addEventListener("click", createShower);
+  document
+    .querySelector(`.aboutIcon`)
+    .addEventListener("click", handelAboutPage);
 });
+
+/* createShower
+--------------------------------------------------------------
+Description: */
+const handelAboutPage = () => {
+  document.querySelector(".bodyContainer").classList.add("hidden");
+  document.querySelector(".aboutInfo").classList.remove("hidden");
+  document.querySelector(".aboutInfo .xIcon").addEventListener("click", () => {
+    document.querySelector(".bodyContainer").classList.remove("hidden");
+    document.querySelector(".aboutInfo").classList.add("hidden");
+  })
+}
+
 
 /* createShower
 --------------------------------------------------------------
