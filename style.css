@@ -1,0 +1,393 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-image: url("./assets/bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background: linear-gradient(135deg, #0082fc 0%, #6daac7 50%, #2fc0c0 100%); */
+  direction: rtl;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* טוען */
+.loader {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #f4f4f45d;
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.loader > img {
+  width: 50vw;
+}
+
+.loader.fade {
+  animation: fadeOut 1s 2s forwards;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.instructions {
+  width: 73vw;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.instructions .xIcon {
+  width: 5vw;
+}
+
+.showerItems {
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.showerHead {
+  width: 22vw;
+}
+
+.david {
+  width: 60vw;
+}
+
+.showerItem {
+  width: 17vw;
+}
+
+.showerInstructions {
+  font-size: 2em;
+  text-align: center;
+  top: 19vh;
+  width: fit-content;
+}
+
+.showerItemContainer {
+  bottom: 5vh;
+  display: flex;
+}
+
+.multipleQuestionContainer {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.multipleQuestion {
+  padding: 0.4em;
+}
+
+.ansContainer.binary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.binaryAns {
+  text-align: center;
+  width: 18vw;
+  padding: 0.6em;
+  margin: 0.4em;
+  background-color: rgb(240, 248, 255);
+  border-radius: 0.7em;
+}
+
+.multipleAns {
+  text-align: center;
+  width: 60vw;
+  padding: 0.6em;
+  margin: 0.4em;
+  background-color: rgb(240, 248, 255);
+  border-radius: 0.7em;
+}
+
+.bubble {
+  width: 25vw;
+  position: relative;
+}
+
+.bubble2 {
+    top: 2vh;
+}
+
+.bubblesContainer {
+    top: 57vh;
+    width: 75vw;
+}
+
+/* tools ------------------------------------------------------------------- */
+
+.centerItem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centerX {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hidden {
+  display: none;
+}
+
+.card {
+  padding: 1em;
+  background-color: rgba(240, 248, 255, 0.814);
+  border-radius: 1em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* items animation------------------------------------------------------------- */
+
+.shampoo.animate {
+  position: relative;
+  animation: shampooAnimation 4s linear forwards;
+}
+
+.hairMask.animate {
+  position: relative;
+  animation: hairMaskAnimation 4s linear forwards;
+}
+
+.rubberDuck.animate {
+  position: relative;
+  animation: duckAnimation 4s linear forwards;
+}
+
+.sponge.animate {
+  position: relative;
+  animation: spongeAnimation 4s linear forwards;
+}
+
+@keyframes shampooAnimation {
+  0% {
+    bottom: 0vh;
+    right: 0vw;
+  }
+  25% {
+    bottom: 60vh;
+    right: 16vw;
+  }
+  50% {
+    bottom: 60vh;
+    right: 16vw;
+    transform: rotateZ(-120deg);
+  }
+  85% {
+    bottom: 60vh;
+    right: 16vw;
+  }
+  100% {
+    bottom: 0vh;
+    right: 0vw;
+  }
+}
+
+@keyframes hairMaskAnimation {
+  0% {
+    bottom: 0vh;
+    right: 0vw;
+  }
+  25% {
+    bottom: 60vh;
+    right: -16vw;
+  }
+  50% {
+    bottom: 60vh;
+    right: -16vw;
+    transform: rotateZ(120deg);
+  }
+  85% {
+    bottom: 60vh;
+    right: -16vw;
+  }
+  100% {
+    bottom: 0vh;
+    right: 0vw;
+  }
+}
+
+@keyframes duckAnimation {
+  0% {
+    left: 65vw;
+    bottom: 20vh;
+  }
+  10% {
+    bottom: 18vh;
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    bottom: 20vh;
+  }
+  50% {
+    bottom: 22vh;
+    transform: rotateZ(10deg);
+  }
+  70% {
+    bottom: 20vh;
+  }
+  95% {
+    left: 0vw;
+    bottom: 18vh;
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes spongeAnimation {
+  0% {
+    right: 65vw;
+    bottom: 20vh;
+  }
+  10% {
+    bottom: 18vh;
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    bottom: 20vh;
+  }
+  50% {
+    bottom: 22vh;
+    transform: rotateZ(10deg);
+  }
+  70% {
+    bottom: 20vh;
+  }
+  95% {
+    right: 0vw;
+    bottom: 18vh;
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes soapAnimation {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0.4;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /* rain animation---------------------------------------------------------------------------------------- */
+  *
+  *:before
+  *:after
+{    box-sizing: border-box}
+  
+  body
+{    background-color: #6c78a9;
+    display: flex;
+    align-items: center;
+    justify-content: center}
+  
+  .rain__drop
+  {  animation-delay: calc(var(--d) * 1s);
+    animation-duration: calc(var(--a) * 1s);
+    animation-iteration-count: infinite;
+    animation-name: drop;
+    animation-timing-function: linear;
+    height: 30px;
+    left: calc(var(--x) * 1%);
+    position: absolute;
+    top: calc((var(--y) + 50) * -1px);}
+  
+path {     
+  fill: #87a1a5;
+  opacity: var(--o);
+  transform: scaleY(calc(var(--s) * 1.5));
+}
+
+.rainContainer {
+  width: 56vw;
+  position: absolute;
+  top: 33vh;
+  left: 36%;
+}
+  
+  @keyframes drop {
+    90%
+{      opacity: 1;}
+    100%
+  {    opacity: 0;
+      transform: translateY(100vh)}}
+
+/* towel----------------------------------------------------------------------------- */
+
+
+.scratch-container {
+  position: relative;
+  margin: 0 auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background-size: 100% 100%;
+  background-size: cover;
+}
+
+.sCanvas {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  filter: blur(16px);
+  border-radius: 0.7em;
+}
+
+.innerImage {
+  position: relative;
+  margin: 0 auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background-size: 100% 100%;
+  z-index: 1;
+}
