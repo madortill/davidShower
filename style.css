@@ -3,7 +3,7 @@ html {
   width: 100%;
   height: 100%;
   margin: 0;
-  background-image: url("./assets/bg.svg");
+  background-image: url("./assets/bgNew.svg");
   background-size: cover;
   background-repeat: no-repeat;
   /* background: linear-gradient(135deg, #0082fc 0%, #6daac7 50%, #2fc0c0 100%); */
@@ -105,7 +105,7 @@ html {
 .showerInstructions {
   font-size: 2em;
   text-align: center;
-  top: 15vh;
+  top: 4vh;
   width: fit-content;
 }
 
@@ -373,7 +373,8 @@ path {
 .rainContainer {
   width: 56vw;
   position: absolute;
-  top: 33vh;
+  top: 47vh;
+  height: fit-content;
   left: 36%;
 }
   

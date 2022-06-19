@@ -124,7 +124,7 @@ const createShower = () => {
       "עזרו לדני להתקלח"
     ),
     El("img", {
-      attributes: { src: "./assets/david.png", class: "david centerItem" },
+      attributes: { src: "./assets/daniDirty.svg", class: "david centerItem" },
     }),
     El(
       "div",
@@ -272,9 +272,9 @@ const questionsEnd = () => {
       break;
     case "soap":
         let bubbles = El("div", {classes: ["bubblesContainer", "centerX"],},
-            El("img", {attributes: {src: "./assets/bubbles.png", class: "bubble bubble1"}}, ),
-            El("img", {attributes: {src: "./assets/bubbles.png", class: "bubble bubble2"}}, ),
-            El("img", {attributes: {src: "./assets/bubbles.png", class: "bubble bubble3"}}, ),
+            El("img", {attributes: {src: "./assets/bubbles.svg", class: "bubble bubble1"}}, ),
+            El("img", {attributes: {src: "./assets/bubbles.svg", class: "bubble bubble2"}}, ),
+            El("img", {attributes: {src: "./assets/bubbles.svg", class: "bubble bubble3"}}, ),
         );
         document.querySelector(`.showerItems`).append(bubbles);
         document.querySelector(`.bubble1`).style.animation = "soapAnimation 4s ease-in forwards";
@@ -313,6 +313,7 @@ const finishExer = () => {
       document.querySelector(`.rain`).classList.add("hidden");
       document.querySelector(`.showerInstructions `).innerHTML = "ועכשיו נגבו את האדים";
       document.querySelector(`.scratch-container`).classList.remove("hidden");
+      document.querySelector(`.david `).setAttribute("src", "./assets/daniClean.svg");
       handlePractice0();
     }, 5000)
 
@@ -326,9 +327,11 @@ const finishExer = () => {
 --------------------------------------------------------------
 Description: */
 const winShower = () => {
-  document.querySelector(`.instructions`).classList.remove("hidden");
   document.querySelector(`.showerInstructions `).innerHTML = "מעולים אתם!";
-  document.querySelector(`.instructions`).innerHTML = "כל הכבוד הצלחתם לקלח את דני! סוף סוף אפשר לראות שהעניים שלו הן בצבע כחול";
+  setTimeout(() => {
+    document.querySelector(`.instructions`).classList.remove("hidden");
+    document.querySelector(`.instructions`).innerHTML = "כל הכבוד הצלחתם לקלח את דני! סוף סוף אפשר לראות שהעניים שלו הן בצבע כחול";
+  }, 2000)
 }
 
 
