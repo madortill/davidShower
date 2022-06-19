@@ -126,6 +126,9 @@ const createShower = () => {
     El("img", {
       attributes: { src: "./assets/daniDirty.svg", class: "david centerItem" },
     }),
+    El("img", {
+      attributes: { src: "./assets/bubblesBody.svg", class: "bodyBubbles " },
+    }),
     El("div", {classes: ["dirtContainer", "centerItem"]}),
     El(
       "div",
@@ -246,11 +249,11 @@ const onClickAnswer = (event) => {
     arrAns[i].removeEventListener("click", onClickAnswer);
   }
   // check if answer is correct
+  document.querySelector(`.${arrMultipleQuestions[nMultipleCurrentQuestion].correctAns}`).style.backgroundColor = "#6dcd6d";
   if (
     event.currentTarget.classList[1] ===
     String(arrMultipleQuestions[nMultipleCurrentQuestion].correctAns)
   ) {
-    event.currentTarget.style.backgroundColor = "#6dcd6d";
     nMultipleCorrectAnswers++;
   } else {
     event.currentTarget.style.backgroundColor = "#e56060";
@@ -272,7 +275,6 @@ const onClickAnswer = (event) => {
 Description: */
 const questionsEnd = () => {
   document.querySelector(`.multipleQuestionContainer`).classList.add("hidden");
-  // document.querySelector(`.david `).setAttribute("src", `./assets/daniDirty${nMultipleCurrentQuestion / AMOUNT_OF_QUESTION}.svg`);
   switch (strCurrentItem) {
     case "sponge":
       document.querySelector(`.sponge`).classList.add("animate");
@@ -326,6 +328,8 @@ Description: */
 const finishExer = () => {
   if(nMultipleCorrectAnswers >= ANSWERS_TO_WIN) {
     document.querySelector(`.rain`).classList.remove("hidden");
+    document.querySelector(`.bodyBubbles`).style.animation = "fadeOut 2s 2s linear forwards"; 
+
     document.querySelector(`.showerInstructions`).classList.add("hidden");
     setTimeout(() => {
       document.querySelector(`.showerInstructions`).classList.remove("hidden");
@@ -347,10 +351,10 @@ const finishExer = () => {
 Description: */
 const winShower = () => {
   document.querySelector(`.showerInstructions `).innerHTML = "מעולים אתם!";
-  setTimeout(() => {
-    document.querySelector(`.instructions`).classList.remove("hidden");
-    document.querySelector(`.instructions`).innerHTML = "כל הכבוד הצלחתם לקלח את דני! סוף סוף אפשר לראות שהעניים שלו הן בצבע כחול";
-  }, 2000)
+  document.querySelector(`.instructions`).classList.remove("hidden");
+  document.querySelector(`.instructions`).classList.remove("centerItem");
+  document.querySelector(`.instructions`).classList.add("win");
+  document.querySelector(`.instructions`).innerHTML = "כל הכבוד הצלחתם לקלח את דני! סוף סוף אפשר לראות שהעניים שלו הן בצבע כחול";
 }
 
 

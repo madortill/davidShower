@@ -90,6 +90,13 @@ html {
   justify-content: space-between;
 }
 
+.instructions.win {
+  position: absolute;
+  top: 73%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .instructions .xIcon {
   width: 5vw;
 }
@@ -108,6 +115,15 @@ html {
 
 .david {
   width: 60vw;
+}
+
+.bodyBubbles {
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+
 }
 
 .showerItem {
@@ -341,25 +357,25 @@ html {
 @keyframes duckAnimation {
   0% {
     left: 65vw;
-    bottom: 20vh;
+    bottom: 30vh;
   }
   10% {
-    bottom: 18vh;
+    bottom: 28vh;
     transform: rotateZ(-10deg);
   }
   30% {
-    bottom: 20vh;
+    bottom: 30vh;
   }
   50% {
-    bottom: 22vh;
+    bottom: 32vh;
     transform: rotateZ(10deg);
   }
   70% {
-    bottom: 20vh;
+    bottom: 30vh;
   }
   95% {
     left: 0vw;
-    bottom: 18vh;
+    bottom: 28vh;
     transform: rotateZ(-10deg);
   }
   100% {
@@ -370,25 +386,25 @@ html {
 @keyframes spongeAnimation {
   0% {
     right: 65vw;
-    bottom: 20vh;
+    bottom: 30vh;
   }
   10% {
-    bottom: 18vh;
+    bottom: 28vh;
     transform: rotateZ(-10deg);
   }
   30% {
-    bottom: 20vh;
+    bottom: 30vh;
   }
   50% {
-    bottom: 22vh;
+    bottom: 32vh;
     transform: rotateZ(10deg);
   }
   70% {
-    bottom: 20vh;
+    bottom: 30vh;
   }
   95% {
     right: 0vw;
-    bottom: 18vh;
+    bottom: 28vh;
     transform: rotateZ(-10deg);
   }
   100% {
