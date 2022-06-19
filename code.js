@@ -126,6 +126,7 @@ const createShower = () => {
     El("img", {
       attributes: { src: "./assets/daniDirty.svg", class: "david centerItem" },
     }),
+    El("div", {classes: ["dirtContainer", "centerItem"]}),
     El(
       "div",
       { classes: ["showerItemContainer", "centerX"] },
@@ -156,6 +157,14 @@ const createShower = () => {
     )
   );
   document.querySelector(`.showerContainer`).append(showerItems);
+
+  for(let i = 1; i < 10; i++ ) {
+    let dirt = El("img", {attributes: {
+      src: `./assets/dirt${i}.svg`,
+      class: `dirt dirt${i}`,
+    }},)
+    document.querySelector(`.dirtContainer`).append(dirt);
+  }
 
   arrMultipleQuestions = shuffle(DATA.questions);
 
@@ -263,15 +272,20 @@ const onClickAnswer = (event) => {
 Description: */
 const questionsEnd = () => {
   document.querySelector(`.multipleQuestionContainer`).classList.add("hidden");
-  document.querySelector(`.david `).setAttribute("src", `./assets/daniDirty${nMultipleCurrentQuestion / AMOUNT_OF_QUESTION}.svg`);
+  // document.querySelector(`.david `).setAttribute("src", `./assets/daniDirty${nMultipleCurrentQuestion / AMOUNT_OF_QUESTION}.svg`);
   switch (strCurrentItem) {
     case "sponge":
       document.querySelector(`.sponge`).classList.add("animate");
+      document.querySelector(`.dirt8`).style.animation = "fadeOut 2s 2s linear forwards";
+      document.querySelector(`.dirt9`).style.animation = "fadeOut 2s 2s linear forwards";
       break;
-    case "shampoo":
+      case "shampoo":
+      document.querySelector(`.dirt1`).style.animation = "fadeOut 2s 2s linear forwards";
       document.querySelector(`.shampoo`).classList.add("animate");
       break;
-    case "soap":
+      case "soap":
+      document.querySelector(`.dirt6`).style.animation = "fadeOut 2s 2s linear forwards";
+      document.querySelector(`.dirt5`).style.animation = "fadeOut 2s 2s linear forwards";
         let bubbles = El("div", {classes: ["bubblesContainer", "centerX"],},
             El("img", {attributes: {src: "./assets/bubbles.svg", class: "bubble bubble1"}}, ),
             El("img", {attributes: {src: "./assets/bubbles.svg", class: "bubble bubble2"}}, ),
@@ -283,9 +297,13 @@ const questionsEnd = () => {
         document.querySelector(`.bubble3`).style.animation = "soapAnimation 2s 2s linear forwards";
       break;
     case "hairMask":
+      document.querySelector(`.dirt2`).style.animation = "fadeOut 2s 2s linear forwards";
+      document.querySelector(`.dirt7`).style.animation = "fadeOut 2s 2s linear forwards";
       document.querySelector(`.hairMask`).classList.add("animate");
       break;
     case "rubberDuck":
+      document.querySelector(`.dirt3`).style.animation = "fadeOut 2s 2s linear forwards";
+      document.querySelector(`.dirt4`).style.animation = "fadeOut 2s 2s linear forwards";
         document.querySelector(`.rubberDuck`).classList.add("animate");
       break;
     default:

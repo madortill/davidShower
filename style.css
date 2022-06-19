@@ -178,6 +178,69 @@ html {
     width: 75vw;
 }
 
+.dirtContainer {
+  width: 60vw;
+  height: 36vh;
+}
+
+.dirt {
+  position: absolute;
+}
+
+.dirt1 {
+  width: 18vw;
+  top: 2vh;
+  left: 13vw;
+}
+
+.dirt2 {
+  width: 8vw;
+  top: 4vh;
+  left: 36vw;
+}
+
+.dirt3 {
+  width: 11vw;
+  top: 10vh;
+  left: 8vw;
+}
+
+.dirt4 {
+  width: 9vw;
+  top: 19vh;
+  left: 18vw;
+}
+
+.dirt5 {
+  width: 12vw;
+  top: 24vh;
+  left: 6.5vw;
+}
+
+.dirt6 {
+  width: 12vw;
+  top: 23vh;
+  left: 26vw;
+}
+
+.dirt7 {
+  width: 9vw;
+  top: 16vh;
+  left: 38vw;
+}
+
+.dirt8 {
+  width: 10vw;
+  top: 24vh;
+  left: 41vw;
+}
+
+.dirt9 {
+  width: 12vw;
+  top: 28vh;
+  left: 28vw;
+}
+
 /* tools ------------------------------------------------------------------- */
 
 .centerItem {
@@ -353,6 +416,7 @@ html {
       opacity: 0;
     }
   }
+
 
   /* rain animation---------------------------------------------------------------------------------------- */
   *
