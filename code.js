@@ -263,6 +263,7 @@ const onClickAnswer = (event) => {
 Description: */
 const questionsEnd = () => {
   document.querySelector(`.multipleQuestionContainer`).classList.add("hidden");
+  document.querySelector(`.david `).setAttribute("src", `./assets/daniDirty${nMultipleCurrentQuestion / AMOUNT_OF_QUESTION}.svg`);
   switch (strCurrentItem) {
     case "sponge":
       document.querySelector(`.sponge`).classList.add("animate");

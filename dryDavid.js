@@ -97,7 +97,6 @@ const handlePractice0 = function () {
         sCanvas.parentNode.removeChild(sCanvas);
       } else {
         winShower();
-        console.log("win");
       }
     }
   }

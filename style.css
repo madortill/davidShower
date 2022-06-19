@@ -1,3 +1,10 @@
+/* fonts */
+@font-face {
+  font-family: Rubik;
+  src: url("./assets/fonts/rubik/Rubik-Regular.ttf");
+  font-weight: 500;
+}
+
 body,
 html {
   width: 100%;
@@ -8,7 +15,8 @@ html {
   background-repeat: no-repeat;
   /* background: linear-gradient(135deg, #0082fc 0%, #6daac7 50%, #2fc0c0 100%); */
   direction: rtl;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: Rubik;
+  font-size: 0.95em;
 }
 
 /* טוען */
@@ -62,12 +70,16 @@ html {
 }
 
 .aboutInfo {
-  width: 75vw;
+  width: 80vw;
   z-index: 2;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: column-reverse;
+}
+
+.aboutInfo p {
+  text-align: right;
 }
 
 .instructions {
@@ -104,6 +116,7 @@ html {
 
 .showerInstructions {
   font-size: 2em;
+  font-weight: bold;
   text-align: center;
   top: 4vh;
   width: fit-content;
