@@ -312,6 +312,7 @@ const questionsEnd = () => {
     // code block
   }
   setTimeout(() => {
+      document.querySelector(`.${strCurrentItem}`).classList.add("disabled");
       document.querySelectorAll(`.showerItem`).forEach((item) => {
         item.style.pointerEvents = "all";
       });
